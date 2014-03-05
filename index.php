@@ -61,7 +61,8 @@
 <?php
 if (useServerSideRendering ()) {
     // Get the data
-    $data = getJson (true);
+    require_once ("JSON_renderer.php");
+    $data = JSONRenderer::getJson (true);
 
     echo serverSideRender ($data);
 }
